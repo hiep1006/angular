@@ -20,7 +20,7 @@ export class DepartmentComponent implements OnInit {
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(PopUpComponent, {
-      width: '250px',
+      width: '500px',
       enterAnimationDuration,
       exitAnimationDuration,
     });

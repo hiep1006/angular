@@ -8,10 +8,12 @@ import { throwError } from 'rxjs/internal/observable/throwError';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Department } from '../models/Department';
+import { AddDepartment } from '../models/AddDepartment';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DepartmentsService {
   private httpOptions = {
     headers: new HttpHeaders({
@@ -44,7 +46,7 @@ export class DepartmentsService {
       .pipe(catchError(this.handleError));
   }
 
-  public addDepartment(data: Department) {
+  public addDepartment(data: AddDepartment) {
     const url = `${this.REST_API_SERVER}`;
     return this.httpClient
       .post<any>(url, data, this.httpOptions)

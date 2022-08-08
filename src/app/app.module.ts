@@ -8,8 +8,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
-import { AddDepartmentComponent } from './department/add-department/add-department.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {A11yModule} from '@angular/cdk/a11y';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -32,8 +30,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
@@ -54,6 +50,10 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {CdkMenuModule} from '@angular/cdk/menu';
 import {DialogModule} from '@angular/cdk/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   exports: [
@@ -109,7 +109,6 @@ import {DialogModule} from '@angular/cdk/dialog';
     AppComponent,
     PopUpComponent,
     DepartmentComponent,
-    AddDepartmentComponent,
   ],
   imports: [
     MatDialogModule,
@@ -118,7 +117,10 @@ import {DialogModule} from '@angular/cdk/dialog';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
