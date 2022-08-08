@@ -6,15 +6,8 @@ import {MatDialogRef} from '@angular/material/dialog';
   templateUrl: './pop-up.component.html',
   styleUrls: ['./pop-up.component.scss']
 })
-export class PopUpComponent implements OnInit {
+export class PopUpComponent {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<PopUpComponent>) { }
 
-  ngOnInit(): void {
-  }
-
-}
-
-export class DialogAnimationsExampleDialog {
-  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) {}
 }

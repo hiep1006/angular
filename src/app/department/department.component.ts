@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Department } from '../models/Department';
 import { DepartmentsService } from '../services/departments.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { DialogAnimationsExampleDialog, PopUpComponent } from '../pop-up/pop-up.component';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
   selector: 'app-department',
@@ -16,19 +16,18 @@ export class DepartmentComponent implements OnInit {
   constructor(
     private serverHttp: DepartmentsService,
     public dialog: MatDialog
-  ) {
-  }
-
-  ngOnInit(): void {
-    this.loadData();
-  }
+  ) {}
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(DialogAnimationsExampleDialog, {
+    this.dialog.open(PopUpComponent, {
       width: '250px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
+  }
+
+  ngOnInit(): void {
+    this.loadData();
   }
 
   loadData = () => {
