@@ -3,7 +3,7 @@ import { Department } from '../models/Department';
 import { DepartmentsService } from '../services/departments.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
-
+import { NotificationDeleteComponent } from './notification-delete/notification-delete.component';
 @Component({
   selector: 'app-department',
   templateUrl: './department.component.html',
@@ -15,14 +15,28 @@ export class DepartmentComponent implements OnInit {
 
   constructor(
     private serverHttp: DepartmentsService,
-    public dialog: MatDialog
-  ) {}
+    public dialog: MatDialog,
+  ) {
+
+  }
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(PopUpComponent, {
       width: '500px',
       enterAnimationDuration,
       exitAnimationDuration,
+    });
+  }
+
+  openNotificationDelete(enterAnimationDuration: string, exitAnimationDuration: string, name: string, id: number): void {
+    this.dialog.open(NotificationDeleteComponent, {
+      width: '500px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: {
+        name: name,
+        id: id
+      },
     });
   }
 
@@ -33,8 +47,7 @@ export class DepartmentComponent implements OnInit {
   loadData = () => {
     this.serverHttp.getDepartments().subscribe((data) => {
       this.departments = data;
-      console.log(this.departments);
     });
   }
-  displayedColumns: string[] = ['id', 'name'];
+  displayedColumns: string[] = ['id', 'name', 'weight'];
 }

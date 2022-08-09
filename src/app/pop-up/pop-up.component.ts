@@ -33,6 +33,7 @@ export class PopUpComponent {
     this.serverHttp.addDepartment(this.objData).subscribe((data) => {
       location.reload();
       this.contractTypeValid = false;
+      this.dialogRef.close("IT WAS SAVED");
     });
 
    

@@ -54,6 +54,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { NotificationDeleteComponent } from './department/notification-delete/notification-delete.component';
 
 @NgModule({
   exports: [
@@ -104,11 +105,13 @@ import { FormsModule } from '@angular/forms';
     PortalModule,
     ScrollingModule,
     DialogModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
     PopUpComponent,
     DepartmentComponent,
+    NotificationDeleteComponent,
   ],
   imports: [
     MatDialogModule,

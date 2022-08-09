@@ -60,8 +60,8 @@ export class DepartmentsService {
       .pipe(catchError(this.handleError));
   }
 
-  public deleteDepartment(studentId: number) {
-    const url = `${this.REST_API_SERVER}/` + studentId;
+  public deleteDepartment(id: number) {
+    const url = `${this.REST_API_SERVER}/` + id;
     return this.httpClient.delete<any>(url).pipe(catchError(this.handleError));
   }
 
