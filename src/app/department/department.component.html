@@ -21,8 +21,8 @@
   <ng-container matColumnDef="weight">
     <th mat-header-cell *matHeaderCellDef> Action </th>
     <td mat-cell *matCellDef="let element">
-      <mat-icon id="editIcon">edit</mat-icon>
-      <mat-icon id="deleteIcon" (click)="openNotificationDelete('0ms', '0ms', element.name, element.id)">delete</mat-icon>
+      <mat-icon id="editIcon" (click)="openNotificationEdit('0ms', '0ms', element.name, element.id)">edit</mat-icon>
+      <mat-icon id="deleteIcon" (click)="openNotificationDelete('0ms', '0ms', element.id, element.name)">delete</mat-icon>
     </td>
   </ng-container>
 

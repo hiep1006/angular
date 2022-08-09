@@ -28,14 +28,23 @@ export class DepartmentComponent implements OnInit {
     });
   }
 
-  openNotificationDelete(enterAnimationDuration: string, exitAnimationDuration: string, name: string, id: number): void {
+  openNotificationDelete(enterAnimationDuration: string, exitAnimationDuration: string, id: number, name: string): void {
     this.dialog.open(NotificationDeleteComponent, {
       width: '500px',
       enterAnimationDuration,
       exitAnimationDuration,
-      data: {
-        name: name,
-        id: id
+      data: { id: id, name: name },
+      
+    });
+  }
+
+  openNotificationEdit(enterAnimationDuration: string, exitAnimationDuration: string, name: string, id: number): void {
+    this.dialog.open(PopUpComponent, {
+      width: '500px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: { 
+        id: id, title: "Edit"
       },
     });
   }

@@ -1,8 +1,8 @@
 <h1 mat-dialog-title>Delete this department ?</h1>
 <div mat-dialog-content>
-  Would you like to delete department <span style="color: red;">{{data.name}}</span> 
+  Would you like to delete <span style="color: red;">{{data.name}}</span> 
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>close</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Delete</button>
+  <button mat-button mat-dialog-close (click)="deleteDepartmentById(data.id)">Delete</button>
 </div>

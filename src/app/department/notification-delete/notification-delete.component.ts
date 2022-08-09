@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DepartmentsService } from 'src/app/services/departments.service';
+import { DepartmentComponent } from '../department.component';
 
 @Component({
   selector: 'app-notification-delete',
@@ -9,7 +10,7 @@ import { DepartmentsService } from 'src/app/services/departments.service';
 })
 export class NotificationDeleteComponent implements OnInit {
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: { name: string, id: number },
+    @Inject(MAT_DIALOG_DATA) public data: {id: number, name: string},
     private serverHttp: DepartmentsService,
   ) { }
 
@@ -24,7 +25,7 @@ export class NotificationDeleteComponent implements OnInit {
 
   deleteDepartmentById = (id: number) => {
     this.serverHttp.deleteDepartment(id).subscribe((data) => {
-      //this.loadData();
+      location.reload();
     });
   }
 }
