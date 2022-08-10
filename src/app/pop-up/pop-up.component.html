@@ -1,14 +1,15 @@
-<h1 mat-dialog-title>Add new department</h1>
+<h1 mat-dialog-title>{{data.title}} new department</h1>
 <div mat-dialog-content>
   <div>
     <mat-form-field appearance="standard">
       <mat-label>Name</mat-label>
       <input matInput placeholder="Placeholder" [(ngModel)]="name">
+      <input id="id" hidden matInput placeholder="Placeholder">
     </mat-form-field>
     <div style="color: red;">{{errorName}}</div>
   </div>
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
-  <button mat-button cdkFocusInitial (click)="addDepartment()"  [disabled]="contractTypeValid">Add</button>
+  <button mat-button cdkFocusInitial (click)="save(data.id)"  [disabled]="contractTypeValid">{{data.title}}</button>
 </div>

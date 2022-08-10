@@ -53,8 +53,8 @@ export class DepartmentsService {
       .pipe(catchError(this.handleError));
   }
 
-  public modifyDepartment(studentId: number, data: Department) {
-    const url = `${this.REST_API_SERVER}/students/` + studentId;
+  public modifyDepartment(id: number, data: Department) {
+    const url = `${this.REST_API_SERVER}/` + id;
     return this.httpClient
       .put<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));

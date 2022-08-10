@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DepartmentsService } from 'src/app/services/departments.service';
-import { DepartmentComponent } from '../department.component';
 
 @Component({
   selector: 'app-notification-delete',
