@@ -55,6 +55,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { NotificationDeleteComponent } from './department/notification-delete/notification-delete.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   exports: [
@@ -112,6 +113,7 @@ import { NotificationDeleteComponent } from './department/notification-delete/no
     PopUpComponent,
     DepartmentComponent,
     NotificationDeleteComponent,
+    UserComponent,
   ],
   imports: [
     MatDialogModule,
