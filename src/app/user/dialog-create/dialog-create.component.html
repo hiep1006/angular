@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>{{data.title}} new user</h1>
+<div mat-dialog-content>
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>Fullname</mat-label>
+      <input matInput placeholder="fullname" [(ngModel)]="fullname">
+      <input id="id" hidden matInput placeholder="fullname" >
+    </mat-form-field>
+    <div style="color: red;"></div>
+  </div>
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="username" [(ngModel)]="username">
+      <input id="id" hidden matInput placeholder="username" >
+    </mat-form-field>
+    <div style="color: red;"></div>
+  </div>
+  <div>
+    <mat-form-field appearance="standard">
+      <mat-label>Department</mat-label>
+      <input matInput placeholder="department" [(ngModel)]="department">
+      <input id="id" hidden matInput placeholder="department" >
+    </mat-form-field>
+    <div style="color: red;"></div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button cdkFocusInitial (click)="save()"  [disabled]="">{{data.title}}</button>
+</div>

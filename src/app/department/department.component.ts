@@ -31,7 +31,7 @@ export class DepartmentComponent implements OnInit {
     });
   }
 
-  openNotificationDelete(enterAnimationDuration: string, exitAnimationDuration: string, name: string, id: number): void {
+  openNotificationDelete(enterAnimationDuration: string, exitAnimationDuration: string, id: number, name: string): void {
     this.dialog.open(NotificationDeleteComponent, {
       width: '500px',
       enterAnimationDuration,
