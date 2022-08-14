@@ -33,7 +33,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
@@ -57,6 +56,7 @@ import { FormsModule } from '@angular/forms';
 import { NotificationDeleteComponent } from './department/notification-delete/notification-delete.component';
 import { UserComponent } from './user/user.component';
 import { DialogCreateComponent } from './user/dialog-create/dialog-create.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   exports: [
@@ -127,7 +127,8 @@ import { DialogCreateComponent } from './user/dialog-create/dialog-create.compon
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
